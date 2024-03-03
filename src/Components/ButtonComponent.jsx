@@ -181,10 +181,6 @@ function ButtonComponent() {
             height: 32px;
             fill: #1da1f2;
           }
-
-          .delText {
-            color: white;
-          }
         `}
       </style>
       <button className="button">
@@ -196,9 +192,7 @@ function ButtonComponent() {
             <use xlinkHref="#bottom"></use>
           </svg>
         </div>
-        <span>
-            <div className="delText">Delete</div>
-        </span>
+        <span>Delete</span>
       </button>
 
       <svg xmlns="http://www.w3.org/2000/svg" style={{ display: "none" }}>

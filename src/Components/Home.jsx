@@ -24,33 +24,37 @@ const Home = () => {
   }, [tasks]);
 
   return (
-    <div className="wrapper">
-      <div className="container">
-        <h1>Daily Goals</h1>
-        <form onSubmit={submitHandler}>
-          <input
-            type="text"
-            placeholder="Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <textarea
-            placeholder="Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
-          <button type="submit">ADD TASK</button>
-        </form>
-        {tasks.map((item, index) => (
-          <Task
-            key={index}
-            title={item.title}
-            description={item.description}
-            deleteTask={deleteTask}
-            index={index}
-          />
-        ))}
-      </div>
+    <div>
+      <main>
+        <div className="container">
+          <h1>Daily Goals</h1>
+          <form onSubmit={submitHandler}>
+            <input
+              type="text"
+              placeholder="Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+            <textarea
+              placeholder="Description"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            ></textarea>
+            <button type="submit">ADD TASK</button>
+          </form>
+          {tasks.map((item, index) => (
+            <Task
+              key={index}
+              title={item.title}
+              description={item.description}
+              deleteTask={deleteTask}
+              index={index}
+            />
+          ))}
+        </div>
+      </main>
+      <div class="circle1"></div>
+      <div class="circle2"></div>
     </div>
   );
 };

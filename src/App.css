@@ -5,37 +5,65 @@
   font-family: "Roboto", sans-serif;
 }
 
-.wrapper {
-  background-color: black;
-  /* background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  ); */
-}
-
-nav {
-  height: 50px;
-  background-color: black;
-  color: white;
-  font-weight: 700;
-  font-size: 2rem;
+main {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to right top, #a6c5a7, #92a09099);
   display: flex;
-  padding: 10px;
   align-items: center;
   justify-content: center;
 }
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(92, 108, 91, 0.598),
+    rgba(71, 138, 62, 0.25)
+  );
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  top: 1%;
+  right: 2%;
+}
+.circle2 {
+  bottom: 1%;
+  left: 2%;
+}
 
 .container {
-  background-color: rgb(212, 212, 212);
-  width: 70%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    to left bottom,
+    rgba(151, 176, 144, 0.574),
+    rgba(110, 116, 107, 0.3)
+  );
+  width: 80%;
   margin: auto;
-  min-height: 100vh;
+  min-height: 85vh;
+  max-height: 85vh;
   padding: 4vmax 8vmax;
   box-sizing: border-box;
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  overflow-y: scroll;
 }
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
 
 .container > form {
   display: flex;
@@ -62,6 +90,20 @@ nav {
   font-size: 1.2rem;
 }
 
+.container > form > textarea,
+.container > form > input  {
+  background: linear-gradient(to right top, #cde5c82a, #c0ff9b1d);
+  color: black;
+}
+::placeholder {
+  color: rgb(49, 49, 49);
+  opacity: 1; 
+}
+
+::-ms-input-placeholder { 
+  color: rgb(67, 67, 67);
+}
+
 .container > form > button {
   border: none;
   cursor: pointer;
@@ -77,7 +119,7 @@ nav {
 .task {
   display: flex;
   align-items: center;
-  background-color: white;
+  background: linear-gradient(to right top, #e8ffd736, #f0ffed56);
   padding: 20px;
   border-radius: 10px;
   margin: 20px 0;
@@ -88,29 +130,17 @@ nav {
 }
 
 .task p {
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
-.task span {
-  color: rgb(67, 67, 67);
+.task > div > span {
+  color: rgb(74, 74, 74);
+  font-weight: 600;
+  font-size: 1rem;
 }
-
-/* .task > button {
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  font-size: 1.6rem;
-  background-color: rgba(220, 20, 60, 0.806);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.task button:hover {
-  background-color: red;
-} */
 
 .delBtnDiv {
-  background-color: white;
+  background: linear-gradient(to right top, #cfffc62a, #c0ff9b1d);
   border: none;
 }
