@@ -9,8 +9,8 @@ Step 3 -> Run the following commands in your terminal -
 
   Command 1 ->
 
-  npm install
+    npm install
 
   Command 2 ->
 
-  npm start
+    npm start
